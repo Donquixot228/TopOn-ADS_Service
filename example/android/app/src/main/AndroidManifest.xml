@@ -2,6 +2,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.anythink_sdk_example">
 
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
+    <!--    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--    <uses-permission android:name="android.permission.WAKE_LOCK" />-->
+    <!--<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
+    <!--<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>-->
+
     <application
         android:name=".ApplicationDemo"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +19,7 @@
         tools:replace="android:label">
         <activity
             android:name=".MainActivity"
+            android:exported="true"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
             android:hardwareAccelerated="true"
             android:launchMode="singleTop"
@@ -34,10 +45,46 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+        <activity
+            android:name="io.presage.mraid.browser.ShortcutActivity"
+            android:exported="true" />
+        <receiver android:name="com.kidoz.sdk.api.receivers.SdkReceiver"
+            android:exported="true">
+        </receiver>
+        <receiver android:name="com.startapp.sdk.adsbase.remoteconfig.BootCompleteListener"
+            android:exported="true">
+        </receiver>
+        <!-- Don't delete the meta-data below.
+             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-9488501426181082~6354662111" />
 
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <!-- source file: nonchina_jcenter/network_sdk/admob/AndroidManifest.xml -->
+        <!--google-->
+        <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true" />
+
+        <!-- source file: nonchina_jcenter/network_sdk/mopub/AndroidManifest.xml -->
+
+        <!-- source file: nonchina_jcenter/network_sdk/vungle/AndroidManifest.xml -->
+
+        <!-- source file: nonchina_jcenter/network_sdk/inmobi/AndroidManifest.xml -->
+        <!--android:networkSecurityConfig="@xml/network_security_config"-->
+
+        <!-- source file: nonchina_jcenter/network_sdk/pangle/AndroidManifest.xml -->
+        <provider
+            android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"
+            android:authorities="${applicationId}.TTMultiProvider"
+            android:exported="false" />
+        <!-- source file: nonchina_jcenter/network_sdk/fyber/AndroidManifest.xml -->
         <meta-data android:name="flutterEmbedding" android:value="2" />
-
     </application>
-
 </manifest>
