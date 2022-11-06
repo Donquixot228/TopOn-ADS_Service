@@ -2,6 +2,9 @@ import 'dart:async';
 import 'package:anythink_sdk/anythink_sdk.dart';
 
 final ATBannerManager = ATBanner();
+ 
+
+
 
 class ATBanner {
 /*Init */
