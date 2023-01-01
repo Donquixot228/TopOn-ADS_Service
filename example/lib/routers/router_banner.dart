@@ -2,7 +2,6 @@ import 'package:anythink_sdk/at_index.dart';
 import 'package:anythink_sdk/at_platformview/at_banner_platform_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../manager/banner_sdk.dart';
 import '../configuration_sdk.dart';
 
