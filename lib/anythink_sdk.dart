@@ -4,7 +4,6 @@ import 'package:flutter/services.dart';
 
 final ATFlutterChannel = AnythinkSdk();
 
-
 class AnythinkSdk {
   static const MethodChannel channel =
       const MethodChannel('anythink_sdk');
